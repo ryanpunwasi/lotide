@@ -7,6 +7,8 @@ const tail = array => {
   return array.slice(1);
 };
 
+// Tests
+
 const result = tail([1, 2, 3, 4, 5]);
 assertEqual(result.length, 4);
 assertEqual(result[0], 2);
