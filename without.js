@@ -20,12 +20,12 @@ const assertArraysEqual = (arr1, arr2) => {
 const without = (source, itemsToRemove) => {
   let filteredArray = [];
   source.forEach(element => {
-    if(!itemsToRemove.includes(element)) {
+    if (!itemsToRemove.includes(element)) {
       filteredArray.push(element);
     }
   });
   return filteredArray;
-}
+};
 
 assertArraysEqual(without([1, 2, 3, 5], [5]), [1, 2, 3]);
 assertArraysEqual(without([1], []), [1]);
@@ -35,4 +35,4 @@ assertArraysEqual(without(['Frodo', 'Gandalf', 'Sam', 'Frodo', 'Sauron'], ['Gand
 
 const original = [1, 2, 3];
 without(original, [3]);
-assertArraysEqual(original, [1, 2, 3])
+assertArraysEqual(original, [1, 2, 3]);
