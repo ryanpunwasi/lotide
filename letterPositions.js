@@ -21,8 +21,8 @@ const letterPositions = function(sentence) {
   const results = {};
   for (let letter in sentence) {
     letter = Number(letter); // Typecast letter, which is a string of a numerical index, to a Number
-    if(sentence[letter] !== ' ') { // skips spaces
-      if(results[sentence[letter]] !== undefined) {
+    if (sentence[letter] !== ' ') { // skips spaces
+      if (results[sentence[letter]] !== undefined) {
         results[sentence[letter]].push(letter);
       } else {
         results[sentence[letter]] = [letter];
@@ -37,4 +37,3 @@ assertArraysEqual(letterPositions(test)['h'], [0]);
 assertArraysEqual(letterPositions(test)['e'], [1]);
 assertArraysEqual(letterPositions(test)['l'], [2, 3]);
 assertArraysEqual(letterPositions(test)['o'], [4]);
-console.log(letterPositions('Hello there nice to meet you'))
