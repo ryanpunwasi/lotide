@@ -6,8 +6,8 @@ const assertEqual = (actual, expected) => {
 const countLetters = (sentence) => {
   sentence = sentence.split(" ").join('');
   let count = {};
-  for(let character of sentence) {
-    if(count[character]) {
+  for (let character of sentence) {
+    if (count[character]) {
       count[character]++;
     } else {
       count[character] = 1;
