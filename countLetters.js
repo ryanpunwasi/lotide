@@ -4,10 +4,22 @@ const assertEqual = (actual, expected) => {
 };
 
 const countLetters = (sentence) => {
+  sentence = sentence.split(" ").join('');
   let count = {};
   for(let character of sentence) {
+    if(count[character]) {
+      count[character]++;
+    } else {
+      count[character] = 1;
+    }
   }
   return count;
 };
 
-countLetters('Hello there');
+assertEqual(Object.keys(countLetters('')).length, 0);
+
+const test = 'lodash and lotide libraries';
+assertEqual(countLetters(test)['l'], 3);
+assertEqual(countLetters(test)['o'], 2);
+assertEqual(countLetters(test)['z'], undefined);
+assertEqual(countLetters(test)[' '], undefined);
