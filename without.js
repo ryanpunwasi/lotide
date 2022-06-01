@@ -27,7 +27,7 @@ const without = (source, itemsToRemove) => {
   return filteredArray;
 };
 
-assertArraysEqual(without([1, 2, 3, 5], [5]), [1, 2, 3]);
+assertArraysEqual(without([1, 2, 3, 5], [5, 2]), [1, 3]);
 assertArraysEqual(without([1], []), [1]);
 assertArraysEqual(without([], [2000]), []);
 assertArraysEqual(without(['Lebron', 'Magic', 'Kareem', 'Magic'], ['Magic']), ['Lebron', 'Kareem']);
