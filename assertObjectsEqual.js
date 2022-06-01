@@ -39,7 +39,6 @@ const assertObjectsEqual = function(actual, expected) {
 };
 
 assertObjectsEqual({}, {});
-assertObjectsEqual({}, {});
 assertObjectsEqual({ name: 'Cloud' }, {});
 assertObjectsEqual({ team: "Toronto Raptors"}, { team: "Toronto Raptors" });
 assertObjectsEqual({ team: 'Toronto Raptors'}, { team: "Miami Heat" });
