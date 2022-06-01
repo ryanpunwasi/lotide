@@ -21,6 +21,7 @@ const letterPositions = function(sentence) {
   const results = {};
   sentence = sentence.split(" ").join('');
   for (let letter in sentence) {
+    letter = Number(letter);
     if(results[sentence[letter]] !== undefined) {
       results[sentence[letter]].push(letter);
     } else {
@@ -30,6 +31,9 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-console.log(letterPositions('hi'));
+console.log(letterPositions('hello'));
 const test = "hello";
-assertArraysEqual(letterPositions(test)['h'], ['0']);
+assertArraysEqual(letterPositions(test)['h'], [0]);
+assertArraysEqual(letterPositions(test)['e'], [1]);
+assertArraysEqual(letterPositions(test)['l'], [2, 3]);
+assertArraysEqual(letterPositions(test)['o'], [4]);
