@@ -4,8 +4,8 @@ const assertEqual = (actual, expected) => {
 };
 
 const eqObjects = (obj1, obj2) => {
-  objOneKeys = Object.keys(obj1);
-  objTwoKeys = Object.keys(obj2);
+  let objOneKeys = Object.keys(obj1);
+  let objTwoKeys = Object.keys(obj2);
 
   if (objOneKeys.length !== objTwoKeys.length) { // Checks if obj1 and obj2 have the same number of keys
     return false;
@@ -14,8 +14,8 @@ const eqObjects = (obj1, obj2) => {
   for (let key of objOneKeys) {
     if (!objTwoKeys.includes(key)) { // Checks if obj1 and obj2 have identical keys
       return false;
-    } else if(obj1[key] !== obj2[key]) { // Confirms if obj1 and obj2 have identical key-value pairs
-      return false
+    } else if (obj1[key] !== obj2[key]) { // Confirms if obj1 and obj2 have identical key-value pairs
+      return false;
     }
   }
 
