@@ -23,7 +23,7 @@ const eqObjects = (obj1, obj2) => {
 
   for (let key of objOneKeys) {
     if (Array.isArray(obj1[key])) {
-      if(!eqArrays(obj1[key], obj2[key])) { // In the case that obj1[key] is an array, check to see if obj2[key] is an identical array 
+      if (!eqArrays(obj1[key], obj2[key])) { // In the case that obj1[key] is an array, check to see if obj2[key] is an identical array
         return false;
       }
     } else if (obj1[key] !== obj2[key]) { // Confirms if obj1 and obj2 have identical key-value pairs
