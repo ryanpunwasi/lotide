@@ -22,7 +22,7 @@ const eqObjects = (obj1, obj2) => {
   }
 
   for (let key of objOneKeys) {
-    if (Array.isArray(obj1[key])) {
+    if (Array.isArray(obj1[key]) && Array.isArray(obj2[key])) {
       if (!eqArrays(obj1[key], obj2[key])) { // In the case that obj1[key] is an array, check to see if obj2[key] is an identical array
         return false;
       }
@@ -56,4 +56,9 @@ const dc = { d: ["2", 3], c: "1" };
 assertEqual(eqObjects(cd, dc), true);
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
+const cd3 = {c: [1, 2], d: [1, 2]};
+const cd4 = {c: [1, 2], d: [1, 2]};
+const cd5 = {c: [1], d: [1, 2]};
+assertEqual(eqObjects(cd3, cd4), true);
+assertEqual(eqObjects(cd4, cd5), false);
 assertEqual(eqObjects(cd, cd2), false);
