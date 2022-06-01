@@ -3,6 +3,16 @@ const assertEqual = (actual, expected) => {
   console.log(msg);
 };
 
+const eqArrays = (arr1, arr2) => {
+  if (arr1.length !== arr2.length) return false;
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) return false;
+  }
+
+  return true;
+};
+
 const eqObjects = (obj1, obj2) => {
   let objOneKeys = Object.keys(obj1);
   let objTwoKeys = Object.keys(obj2);
@@ -12,9 +22,11 @@ const eqObjects = (obj1, obj2) => {
   }
 
   for (let key of objOneKeys) {
-    //if (!objTwoKeys.includes(key)) { // Checks if obj1 and obj2 have identical keys
-     // return false;
-    if (obj1[key] !== obj2[key]) { // Confirms if obj1 and obj2 have identical key-value pairs
+    if (Array.isArray(obj1[key])) {
+      if(!eqArrays(obj1[key], obj2[key])) { // In the case that obj1[key] is an array, check to see if obj2[key] is an identical array 
+        return false;
+      }
+    } else if (obj1[key] !== obj2[key]) { // Confirms if obj1 and obj2 have identical key-value pairs
       return false;
     }
   }
@@ -22,6 +34,8 @@ const eqObjects = (obj1, obj2) => {
   return true;
 };
 
+
+// TEST CASES
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
 assertEqual(eqObjects(ab, ba), true);
