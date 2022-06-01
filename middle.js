@@ -18,10 +18,13 @@ const assertArraysEqual = (arr1, arr2) => {
 };
 
 const middle = (arr) => {
+  const middleIndex = Math.floor(arr.length / 2);
   let middle = [];
   if (arr.length <= 2) {
     return middle;
   }
-
   return middle;
 }
+
+assertArraysEqual(middle([1]), []);
+assertArraysEqual(middle([1, 2]), []);
