@@ -4,5 +4,13 @@ const assertEqual = (actual, expected) => {
 };
 
 const findKeyByValue = (obj, value) => {
-  
+  for (let property in obj) {
+    if (obj[property] === value) {
+      return property;
+    }
+  }
+
+  return undefined;
 };
+
+console.log(findKeyByValue({1: 2, 3: 4}, 4));
