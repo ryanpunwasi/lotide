@@ -1,8 +1,8 @@
 const takeUntil = function(array, callback) {
   const taken = [];
 
-  for(const ele of array) {
-    if(!callback(ele)) {
+  for (const ele of array) {
+    if (!callback(ele)) {
       taken.push(ele);
     } else {
       return taken;
@@ -10,7 +10,7 @@ const takeUntil = function(array, callback) {
   }
 
   return taken;
-}
+};
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);
