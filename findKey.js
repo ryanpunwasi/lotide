@@ -4,5 +4,10 @@ const assertEqual = (actual, expected) => {
 };
 
 const findKey = (obj, cb) => {
+  for (let property in obj) {
+    if(cb(obj[property])) {
+      return property;
+    }
+  }
   return undefined;
 };
