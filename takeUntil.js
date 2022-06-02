@@ -1,13 +1,14 @@
 const takeUntil = function(array, callback) {
   const taken = [];
 
-  array.forEach((e) => {
-    if(!callback(e)) {
-      takeUntil.push(e);
+  for(const ele of array) {
+    if(!callback(ele)) {
+      taken.push(ele);
     } else {
       return taken;
     }
-  });
+  }
+
   return taken;
 }
 
