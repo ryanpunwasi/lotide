@@ -13,7 +13,7 @@ const assertArraysEqual = (arr1, arr2) => {
   if (eqArrays(arr1, arr2)) {
     console.log(`✅ Assertion Passed: ${inspect(arr1)} === ${inspect(arr2)}`);
   } else {
-    console.log(`❌ Assertion Failed: ${inspect(arr1)} !== [${inspect(arr2)}`);
+    console.log(`❌ Assertion Failed: ${inspect(arr1)} !== ${inspect(arr2)}`);
   }
 };
 
