@@ -62,3 +62,30 @@ const cd5 = {c: [1], d: [1, 2]};
 assertEqual(eqObjects(cd3, cd4), true);
 assertEqual(eqObjects(cd4, cd5), false);
 assertEqual(eqObjects(cd, cd2), false);
+
+// TEST CASES FOR RECURSIVE REFACTOR
+const nested = {
+  firstName: 'Stephen',
+  lastName: 'Curry',
+  info: {
+    height: 74,
+    weight: 84,
+    stats: {
+      championships: 3,
+      mvpCount: 2
+    }
+  }
+};
+
+assertEqual(eqObjects(nested, {
+  firstName: 'Stephen',
+  lastName: 'Curry',
+  info: {
+    height: 74,
+    weight: 84,
+    stats: {
+      championships: 3,
+      mvpCount: 2
+    }
+  }
+}), true);
