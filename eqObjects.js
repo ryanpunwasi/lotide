@@ -34,58 +34,33 @@ const eqObjects = (obj1, obj2) => {
   return true;
 };
 
+module.exports = eqObjects;
+
 
 // TEST CASES
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-assertEqual(eqObjects(ab, ba), true);
+// const ab = { a: "1", b: "2" };
+// const ba = { b: "2", a: "1" };
+// assertEqual(eqObjects(ab, ba), true);
 
-const abc = { a: "1", b: "2", c: "3" };
-assertEqual(eqObjects(ab, abc), false);
+// const abc = { a: "1", b: "2", c: "3" };
+// assertEqual(eqObjects(ab, abc), false);
 
-assertEqual(eqObjects({}, {}), true);
-assertEqual(eqObjects({ name: 'Cloud' }, {}), false);
-assertEqual(eqObjects({ team: "Toronto Raptors"}, { team: "Toronto Raptors" }), true);
-assertEqual(eqObjects({ team: 'Toronto Raptors'}, { team: "Miami Heat" }), false);
-assertEqual(eqObjects({ team: 'Toronto Raptors', player: 'Fred Vanvleet'}, { team: "Miami Heat" }), false);
-assertEqual(eqObjects({ diffKey: 'Toronto Raptors'}, { team: "Toronto Raptors" }), false);
-assertEqual(eqObjects({ east: 'TOR', west: 'GSW'}, { east: 'GSW', west: 'TOR' }), false);
+// assertEqual(eqObjects({}, {}), true);
+// assertEqual(eqObjects({ name: 'Cloud' }, {}), false);
+// assertEqual(eqObjects({ team: "Toronto Raptors"}, { team: "Toronto Raptors" }), true);
+// assertEqual(eqObjects({ team: 'Toronto Raptors'}, { team: "Miami Heat" }), false);
+// assertEqual(eqObjects({ team: 'Toronto Raptors', player: 'Fred Vanvleet'}, { team: "Miami Heat" }), false);
+// assertEqual(eqObjects({ diffKey: 'Toronto Raptors'}, { team: "Toronto Raptors" }), false);
+// assertEqual(eqObjects({ east: 'TOR', west: 'GSW'}, { east: 'GSW', west: 'TOR' }), false);
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObjects(cd, dc), true);
+// const cd = { c: "1", d: ["2", 3] };
+// const dc = { d: ["2", 3], c: "1" };
+// assertEqual(eqObjects(cd, dc), true);
 
-const cd2 = { c: "1", d: ["2", 3, 4] };
-const cd3 = {c: [1, 2], d: [1, 2]};
-const cd4 = {c: [1, 2], d: [1, 2]};
-const cd5 = {c: [1], d: [1, 2]};
-assertEqual(eqObjects(cd3, cd4), true);
-assertEqual(eqObjects(cd4, cd5), false);
-assertEqual(eqObjects(cd, cd2), false);
-
-// TEST CASES FOR RECURSIVE REFACTOR
-const nested = {
-  firstName: 'Stephen',
-  lastName: 'Curry',
-  info: {
-    height: 74,
-    weight: 84,
-    stats: {
-      championships: 3,
-      mvpCount: 2
-    }
-  }
-};
-
-assertEqual(eqObjects(nested, {
-  firstName: 'Stephen',
-  lastName: 'Curry',
-  info: {
-    height: 74,
-    weight: 84,
-    stats: {
-      championships: 3,
-      mvpCount: 2
-    }
-  }
-}), true);
+// const cd2 = { c: "1", d: ["2", 3, 4] };
+// const cd3 = {c: [1, 2], d: [1, 2]};
+// const cd4 = {c: [1, 2], d: [1, 2]};
+// const cd5 = {c: [1], d: [1, 2]};
+// assertEqual(eqObjects(cd3, cd4), true);
+// assertEqual(eqObjects(cd4, cd5), false);
+// assertEqual(eqObjects(cd, cd2), false);

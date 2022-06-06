@@ -27,12 +27,13 @@ const without = (source, itemsToRemove) => {
   return filteredArray;
 };
 
-assertArraysEqual(without([1, 2, 3, 5], [5, 2]), [1, 3]);
-assertArraysEqual(without([1], []), [1]);
-assertArraysEqual(without([], [2000]), []);
-assertArraysEqual(without(['Lebron', 'Magic', 'Kareem', 'Magic'], ['Magic']), ['Lebron', 'Kareem']);
-assertArraysEqual(without(['Frodo', 'Gandalf', 'Sam', 'Frodo', 'Sauron'], ['Gandalf', 'Sauron']), ['Frodo', 'Sam', 'Frodo']);
+module.exports = without;
+// assertArraysEqual(without([1, 2, 3, 5], [5, 2]), [1, 3]);
+// assertArraysEqual(without([1], []), [1]);
+// assertArraysEqual(without([], [2000]), []);
+// assertArraysEqual(without(['Lebron', 'Magic', 'Kareem', 'Magic'], ['Magic']), ['Lebron', 'Kareem']);
+// assertArraysEqual(without(['Frodo', 'Gandalf', 'Sam', 'Frodo', 'Sauron'], ['Gandalf', 'Sauron']), ['Frodo', 'Sam', 'Frodo']);
 
-const original = [1, 2, 3];
-without(original, [3]);
-assertArraysEqual(original, [1, 2, 3]);
+// const original = [1, 2, 3];
+// without(original, [3]);
+// assertArraysEqual(original, [1, 2, 3]);

@@ -32,8 +32,9 @@ const flatten = (arr) => {
   return flattened;
 };
 
-assertArraysEqual(flatten([[1, 2], 3, [4], []]), [1, 2, 3, 4]);
-assertArraysEqual(flatten(['a', 'b', 'c']), ['a', 'b', 'c']);
-assertArraysEqual(flatten([]), []);
-assertArraysEqual(flatten([1, [2, 4], 'Tom Brady']), [1, 2, 4, 'Tom Brady']);
-assertArraysEqual(flatten([['Jon Snow'], ['Arthur Dayne'], ['Jaime Lannister']]), ['Jon Snow', 'Arthur Dayne', 'Jaime Lannister']);
+module.exports = flatten;
+// assertArraysEqual(flatten([[1, 2], 3, [4], []]), [1, 2, 3, 4]);
+// assertArraysEqual(flatten(['a', 'b', 'c']), ['a', 'b', 'c']);
+// assertArraysEqual(flatten([]), []);
+// assertArraysEqual(flatten([1, [2, 4], 'Tom Brady']), [1, 2, 4, 'Tom Brady']);
+// assertArraysEqual(flatten([['Jon Snow'], ['Arthur Dayne'], ['Jaime Lannister']]), ['Jon Snow', 'Arthur Dayne', 'Jaime Lannister']);

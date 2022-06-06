@@ -32,8 +32,10 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-const test = "hello";
-assertArraysEqual(letterPositions(test)['h'], [0]);
-assertArraysEqual(letterPositions(test)['e'], [1]);
-assertArraysEqual(letterPositions(test)['l'], [2, 3]);
-assertArraysEqual(letterPositions(test)['o'], [4]);
+module.exports = letterPositions;
+
+// const test = "hello";
+// assertArraysEqual(letterPositions(test)['h'], [0]);
+// assertArraysEqual(letterPositions(test)['e'], [1]);
+// assertArraysEqual(letterPositions(test)['l'], [2, 3]);
+// assertArraysEqual(letterPositions(test)['o'], [4]);

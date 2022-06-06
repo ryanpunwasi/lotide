@@ -16,10 +16,12 @@ const countLetters = (sentence) => {
   return count;
 };
 
-assertEqual(Object.keys(countLetters('')).length, 0);
+module.exports = countLetters;
 
-const test = 'lodash and lotide libraries';
-assertEqual(countLetters(test)['l'], 3);
-assertEqual(countLetters(test)['o'], 2);
-assertEqual(countLetters(test)['z'], undefined);
-assertEqual(countLetters(test)[' '], undefined);
+// assertEqual(Object.keys(countLetters('')).length, 0);
+
+// const test = 'lodash and lotide libraries';
+// assertEqual(countLetters(test)['l'], 3);
+// assertEqual(countLetters(test)['o'], 2);
+// assertEqual(countLetters(test)['z'], undefined);
+// assertEqual(countLetters(test)[' '], undefined);

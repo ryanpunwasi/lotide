@@ -12,17 +12,18 @@ const findKeyByValue = (obj, value) => {
 
   return undefined;
 };
+module.exports = findKeyByValue;
 
-const bestTVShowsByGenre = {
-  sciFi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire",
-  fantasy: "Game of Thrones",
-  anime: "Dorohedoro",
-  western: "Breaking Bad"
-};
+// const bestTVShowsByGenre = {
+//   sciFi: "The Expanse",
+//   comedy: "Brooklyn Nine-Nine",
+//   drama:  "The Wire",
+//   fantasy: "Game of Thrones",
+//   anime: "Dorohedoro",
+//   western: "Breaking Bad"
+// };
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
-assertEqual(findKeyByValue({}, "The Wire"), undefined);
-assertEqual(findKeyByValue(bestTVShowsByGenre, "Breaking Bad"), "western");
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+// assertEqual(findKeyByValue({}, "The Wire"), undefined);
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "Breaking Bad"), "western");
