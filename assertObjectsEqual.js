@@ -38,16 +38,18 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-assertObjectsEqual({}, {});
-assertObjectsEqual({ name: 'Cloud' }, {});
-assertObjectsEqual({ team: "Toronto Raptors"}, { team: "Toronto Raptors" });
-assertObjectsEqual({ team: 'Toronto Raptors'}, { team: "Miami Heat" });
-assertObjectsEqual({ team: 'Toronto Raptors', player: 'Fred Vanvleet'}, { team: "Miami Heat" });
-assertObjectsEqual({ diffKey: 'Toronto Raptors'}, { team: "Toronto Raptors" });
-assertObjectsEqual({ east: 'TOR', west: 'GSW'}, { east: 'GSW', west: 'TOR' });
+module.exports = assertObjectsEqual;
 
-const cd3 = {c: [1, 2], d: [1, 2]};
-const cd4 = {c: [1, 2], d: [1, 2]};
-const cd5 = {c: [1], d: [1, 2]};
-assertObjectsEqual(cd3, cd4);
-assertObjectsEqual(cd4, cd5);
+// assertObjectsEqual({}, {});
+// assertObjectsEqual({ name: 'Cloud' }, {});
+// assertObjectsEqual({ team: "Toronto Raptors"}, { team: "Toronto Raptors" });
+// assertObjectsEqual({ team: 'Toronto Raptors'}, { team: "Miami Heat" });
+// assertObjectsEqual({ team: 'Toronto Raptors', player: 'Fred Vanvleet'}, { team: "Miami Heat" });
+// assertObjectsEqual({ diffKey: 'Toronto Raptors'}, { team: "Toronto Raptors" });
+// assertObjectsEqual({ east: 'TOR', west: 'GSW'}, { east: 'GSW', west: 'TOR' });
+
+// const cd3 = {c: [1, 2], d: [1, 2]};
+// const cd4 = {c: [1, 2], d: [1, 2]};
+// const cd5 = {c: [1], d: [1, 2]};
+// assertObjectsEqual(cd3, cd4);
+// assertObjectsEqual(cd4, cd5);
