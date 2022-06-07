@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@ryanthedev/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A clone of the Lodash Javascript library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/ryanpunwasi/lotide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ryan Punwasi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ryanpunwasi/lotide/issues"
