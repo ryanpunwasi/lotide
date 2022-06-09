@@ -39,7 +39,7 @@ describe("eqObjects", () => {
 
   it("returns false if two deeply nested objects have different key-value pairs", () => {
     const cd5 = {
-      c: { 
+      c: {
         d: { e : { f: 5 } }
       }
     };
@@ -49,7 +49,7 @@ describe("eqObjects", () => {
 
   it("returns true if two deeply nested objects have identical key-value pairs", () => {
     const cd5 = {
-      c: { 
+      c: {
         d: { e : { f: 4 } }
       }
     };
